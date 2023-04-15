@@ -1,6 +1,7 @@
 package application;
 
 import boardgame.Board;
+import chess.ChessMatch;
 
 
 import java.util.Scanner;
@@ -10,7 +11,8 @@ public class Program {
 
         Scanner sc = new Scanner(System.in);
 
-        Board board = new Board(8, 8);
+        ChessMatch chessMatch = new ChessMatch();
+        UI.printBoard(chessMatch.getPieces());
 
         sc.close();
     }

@@ -23,4 +23,14 @@ public class Board {
     public void setColumns(int columns) {
         this.columns = columns;
     }
+
+    //Retorna a matriz pieces na linha "row" e na coluna "column"
+    public Piece piece(int row, int column){
+        return pieces[row][column];
+    }
+
+    //Retorna a peça pela posição
+    public Piece piece(Position position) {
+        return pieces[position.getRow()][position.getColumn()];
+    }
 }
