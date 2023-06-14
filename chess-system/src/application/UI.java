@@ -29,7 +29,7 @@ public class UI {
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
     //Método que percore as linhas e as colunas do tabuleiro
-    public static void printBoard(ChessPiece[][] pieces){
+    public static void printBoard(ChessPiece[][] pieces) {
         for (int i = 0; i < pieces.length; i++) {
             System.out.print((8 - i) + " ");
             for (int j = 0; j < pieces.length; j++) {
@@ -44,11 +44,13 @@ public class UI {
     private static void printPiece(ChessPiece piece) {
         if (piece == null) {
             System.out.print("-");
-        } else {
+        }
+        else {
             if (piece.getColor() == Color.WHITE) {
-                System.out.println(ANSI_WHITE + piece + ANSI_RESET);
-            } else {
-                System.out.println(ANSI_YELLOW + piece + ANSI_RESET);
+                System.out.print(ANSI_WHITE + piece + ANSI_RESET);
+            }
+            else {
+                System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
             }
         }
         System.out.print(" ");
