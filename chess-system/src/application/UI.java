@@ -60,6 +60,9 @@ public class UI {
         printCapturedPieces(captured);
         System.out.println("Turn: " + chessMatch.getTurn());
         System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+        if (chessMatch.getCheck()) {
+            System.out.println("CHECK!");
+        }
     }
 
     //Método que percore as linhas e as colunas do tabuleiro
